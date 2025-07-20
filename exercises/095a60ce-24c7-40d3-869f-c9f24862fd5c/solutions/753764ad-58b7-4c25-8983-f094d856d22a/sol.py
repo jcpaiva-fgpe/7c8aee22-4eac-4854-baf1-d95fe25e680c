@@ -2,14 +2,14 @@
  *              DO NOT TOUCH AREA: START                *
  ********************************************************/
 
-function main() {
-    writeln(exercise());
+def main() {
+    print(exercise());
 }
 
 /********************************************************
  *                DO NOT TOUCH AREA: END                *
  ********************************************************/
 
-function exercise() {
-	print("Global average temperature has risen 1.2 °C since pre‑industrial times!")
+def exercise() {
+	return "Global average temperature has risen 1.2 °C since pre‑industrial times!"
 }
