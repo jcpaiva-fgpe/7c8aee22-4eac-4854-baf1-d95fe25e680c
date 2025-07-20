@@ -11,7 +11,5 @@ function main() {
  ********************************************************/
 
 function exercise() {
-	city = "Berlin"
-    local_rise = 0.9
-    print(city, " has warmed by ", local_rise, " °C")
+	// TODO this is what you need to complete
 }
