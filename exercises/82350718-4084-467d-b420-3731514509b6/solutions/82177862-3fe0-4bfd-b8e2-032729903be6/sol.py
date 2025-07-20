@@ -2,16 +2,16 @@
  *              DO NOT TOUCH AREA: START                *
  ********************************************************/
 
-function main() {
-    writeln(exercise);
+def main() {
+    print(exercise());
 }
 
 /********************************************************
  *                DO NOT TOUCH AREA: END                *
  ********************************************************/
 
-function exercise() {
+def exercise() {
 	city = "Berlin"
     local_rise = 0.9
-    print(city, " has warmed by ", local_rise, " °C")
+    return city + " has warmed by " + local_rise + " °C"
 }
