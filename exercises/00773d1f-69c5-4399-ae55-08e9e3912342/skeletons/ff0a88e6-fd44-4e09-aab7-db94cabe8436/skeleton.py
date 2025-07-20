@@ -12,6 +12,5 @@ def main() {
  ********************************************************/
 
 def exercise(n) {
-	status = "ALERT" if r > 1.5 else "OK"
-    return f"{r}°C — {status}"
+	# TODO this is what you need to complete
 }
