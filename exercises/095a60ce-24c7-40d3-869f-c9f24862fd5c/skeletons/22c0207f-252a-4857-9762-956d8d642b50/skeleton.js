@@ -3,14 +3,13 @@
  ********************************************************/
 
 function main() {
-    const n = readln();
-    writeln(exercise(n));
+    writeln(exercise());
 }
 
 /********************************************************
  *                DO NOT TOUCH AREA: END                *
  ********************************************************/
 
-function exercise(n) {
+function exercise() {
 	// TODO this is what you need to complete
 }
