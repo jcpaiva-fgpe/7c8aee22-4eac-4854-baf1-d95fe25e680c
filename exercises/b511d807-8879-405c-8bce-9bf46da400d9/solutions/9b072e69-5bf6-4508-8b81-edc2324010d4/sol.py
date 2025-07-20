@@ -2,16 +2,16 @@
  *              DO NOT TOUCH AREA: START                *
  ********************************************************/
 
-function main() {
-    writeln(exercise());
+def main() {
+    print(exercise());
 }
 
 /********************************************************
  *                DO NOT TOUCH AREA: END                *
  ********************************************************/
 
-function exercise() {
+def exercise() {
 	temp_rise = 1.2
     units = "°C"
-    print(f"Temperature rise: {temp_rise}{units}")
+    return f"Temperature rise: {temp_rise}{units}"
 }
