@@ -13,7 +13,7 @@ def main() {
 
 def exercise(input) {
 	if temp_rise > 1.5:
-        print("Danger")
+        return "Danger"
     else:
-        print("Within limits")
+        return "Within limits"
 }
