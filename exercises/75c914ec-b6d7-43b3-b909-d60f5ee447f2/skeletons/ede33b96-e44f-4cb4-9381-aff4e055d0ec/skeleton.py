@@ -12,7 +12,7 @@ if __name__ == '__main__':
  *                DO NOT TOUCH AREA: END                *
  ********************************************************/
     
-def exercise():
+def exercise(array):
     # TODO this is what you need to complete
 
     
