@@ -17,6 +17,6 @@ def exercise(entry, current):
     if gain > 50:
         return "SELL!"
     else:
-        return "HODL"
+        return "HOLD"
 
     
