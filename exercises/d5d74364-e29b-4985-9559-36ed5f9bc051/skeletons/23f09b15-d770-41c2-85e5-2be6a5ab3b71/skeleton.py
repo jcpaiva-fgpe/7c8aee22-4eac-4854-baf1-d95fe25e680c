@@ -13,7 +13,6 @@ if __name__ == '__main__':
  ********************************************************/
     
 def exercise(array):
-    anomalies = np.array([0.5, 0.7, 1.0, 1.2])
-    return anomalies.mean(), anomalies.std(), anomalies.var()
+    # TODO this is what you need to complete
 
     
