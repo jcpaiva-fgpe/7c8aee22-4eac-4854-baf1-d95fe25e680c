@@ -11,5 +11,5 @@ def portfolio(coins):
 if __name__ == '__main__':
     inp = input()
     data = json.loads(inp)
-    portfolio(data)
+    print(portfolio(data))
 ############## DO NOT TOUCH AREA: END ###################
