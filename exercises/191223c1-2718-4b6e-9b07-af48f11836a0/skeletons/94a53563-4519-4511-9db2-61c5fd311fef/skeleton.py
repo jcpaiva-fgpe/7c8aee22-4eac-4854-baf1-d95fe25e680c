@@ -5,12 +5,7 @@ import matplotlib.pyplot as plt
     
 def build_plot():
     # TODO this is what you need to complete
-    days = list(range(1, 31))
-    prices = np.random.normal(65000, 2000, 30)
-    plt.plot(days, prices)
-    plt.title("BTC Price - Last 30 Days")
-    plt.xlabel("Day")
-    plt.ylabel("Price ($)")
+
     
 
 ############## DO NOT TOUCH AREA: START #################
