@@ -2,7 +2,8 @@ import pandas as pd
 
 def average(path):
     # TODO this is what you need to complete
-
+    mean_co2 = df["CO2"].mean()
+    print("Average CO₂:", mean_co2)
 
 
 ############## DO NOT TOUCH AREA: START #################
