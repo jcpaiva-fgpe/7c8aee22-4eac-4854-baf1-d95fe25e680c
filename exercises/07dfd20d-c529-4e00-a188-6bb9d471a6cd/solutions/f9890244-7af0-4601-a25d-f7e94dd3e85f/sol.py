@@ -2,7 +2,7 @@ import pandas as pd
 
 def dataframe(path):
     # TODO this is what you need to complete
-    df = pd.read_csv("portfolio.csv")
+    df = pd.read_csv(path)
     print(df.head())
 
 
