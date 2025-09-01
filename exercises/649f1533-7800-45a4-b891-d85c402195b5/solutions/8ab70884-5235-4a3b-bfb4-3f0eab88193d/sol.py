@@ -3,7 +3,7 @@ import numpy as np
 import os
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 
-def filtering(path):
+def sorting(path):
     # TODO this is what you need to complete
     df = pd.read_csv(path)
     sorted_df = df.sort_values(by="High", ascending=False)
@@ -18,7 +18,7 @@ def save_df(df):
 
 if __name__ == '__main__':
     inp = input()
-    df = filtering(inp)
+    df = sorting(inp)
     path = save_df(df)
     print(path)
 ############## DO NOT TOUCH AREA: END ###################
