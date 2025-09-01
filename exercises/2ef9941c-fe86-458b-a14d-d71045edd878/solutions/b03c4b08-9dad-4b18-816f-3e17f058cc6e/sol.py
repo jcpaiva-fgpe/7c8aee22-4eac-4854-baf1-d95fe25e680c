@@ -6,7 +6,7 @@ os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 def missing_values(path):
     # TODO this is what you need to complete
     df = pd.read_csv(path)
-    df["CO2"].fillna(df["CO2"].mean(), inplace=True)
+    df["2041"].fillna(df["2041"].mean(), inplace=True)
     return df
 
 
