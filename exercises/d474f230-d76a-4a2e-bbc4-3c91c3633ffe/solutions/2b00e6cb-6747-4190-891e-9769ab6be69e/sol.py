@@ -2,16 +2,16 @@ import numpy as np
 import json
 
 def greenhouse_levels(co2_levels, methane_levels):
-    # TODO this is what you need to complete
-    _co2_levels = np.array(co2)
-    _methane_levels = np.array(methane)
-    return np.add(_co2_levels, _methane_levels)
+    _co2_levels = np.array(co2_levels)
+    _methane_levels = np.array(methane_levels)
+    return (_co2_levels + _methane_levels)
 
 
 ############## DO NOT TOUCH AREA: START #################
 if __name__ == '__main__':
-    inp = input()
-    co2_levels = json.loads(inp.slit(" ")[0])
-    methane_levels = json.loads(inp.slit(" ")[1])
+    inp = input().strip()
+    parts = inp.split(" ")
+    co2_levels = json.loads(parts[0])
+    methane_levels = json.loads(parts[1])
     print(greenhouse_levels(co2_levels, methane_levels))
 ############## DO NOT TOUCH AREA: END ###################
