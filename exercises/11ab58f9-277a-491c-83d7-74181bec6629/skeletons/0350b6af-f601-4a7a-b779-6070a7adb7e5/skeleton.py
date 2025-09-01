@@ -8,6 +8,6 @@ def average(path):
 ############## DO NOT TOUCH AREA: START #################
 if __name__ == '__main__':
     inp = input()
-    result = average(inp)
-    print(result)
+    mean = average(inp)
+    print(mean)
 ############## DO NOT TOUCH AREA: END ###################
