@@ -1,14 +1,24 @@
 import pandas as pd
+import numpy as np
+import os
+os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 
-def weights(path):
+def applying(path):
     # TODO this is what you need to complete
-    total_value = df["Value"].sum()
-    df["Weight"] = df["Value"] / total_value
-    print(df[["Coin", "Weight"]])
+    df = pd.read_csv(path)
+    df["High_Euro"] = df["High"].apply(lambda x: x * 1.1)
+    return df
 
 
 ############## DO NOT TOUCH AREA: START #################
+def save_df(df):
+    file_path = 'pandas_crypto_7_' + str(np.random.randint(1000)) + '.csv'
+    df.to_csv(file_path, index=False)
+    return file_path
+
 if __name__ == '__main__':
     inp = input()
-    weights(inp)
+    df = applying(inp)
+    path = save_df(df)
+    print(path)
 ############## DO NOT TOUCH AREA: END ###################
