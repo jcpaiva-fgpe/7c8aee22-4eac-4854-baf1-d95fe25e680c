@@ -10,12 +10,12 @@ def filtering(path):
 
 ############## DO NOT TOUCH AREA: START #################
 def save_df(df):
-    file_path = 'pandas_crypto_3.csv'
+    file_path = 'pandas_crypto_3_' + str(np.random.randint(1000)) + '.csv'
     df.to_csv(file_path, index=False)
     return file_path
 
 if __name__ == '__main__':
-    inp = "crypto.csv"
+    inp = input()
     df = filtering(inp)
     path = save_df(df)
     print(path)
