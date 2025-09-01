@@ -12,7 +12,7 @@ def missing_values(path):
 
 ############## DO NOT TOUCH AREA: START #################
 def save_df(df):
-    file_path = 'pandas_climate_2_' + str(np.random.randint(1000)) + '.csv'
+    file_path = 'pandas_climate_6_' + str(np.random.randint(1000)) + '.csv'
     df.to_csv(file_path, index=False)
     return os.path.abspath(file_path)
 
