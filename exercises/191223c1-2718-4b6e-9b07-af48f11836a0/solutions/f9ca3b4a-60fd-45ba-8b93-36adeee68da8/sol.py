@@ -1,16 +1,12 @@
 import os
 import numpy as np
+import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot():
+def build_plot(df):
     # TODO this is what you need to complete
-    days = list(range(1, 31))
-    prices = np.random.normal(65000, 2000, 30)
-    plt.plot(days, prices)
-    plt.title("BTC Price - Last 30 Days")
-    plt.xlabel("Day")
-    plt.ylabel("Price ($)")
+    plt.plot(df["Date"], df["High"])
     
 
 ############## DO NOT TOUCH AREA: START #################
@@ -21,11 +17,11 @@ def save_boxplot():
     plt.close()  # Close the figure to free memory
     return os.path.abspath(file_path)
 
-def main():
-    build_plot()
+if __name__ == '__main__':
+    inp = input()
+    df = pd.read_csv(inp)
+    df = df[df["name"] == "Bitcoin"]
+    build_plot(df)
     path = save_boxplot()
     print(path)
-
-if __name__ == '__main__':
-    main()
 ############## DO NOT TOUCH AREA: END ###################
