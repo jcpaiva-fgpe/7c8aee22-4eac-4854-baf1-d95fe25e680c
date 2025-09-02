@@ -1,29 +1,27 @@
 import os
 import numpy as np
+import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot():
+def build_plot(df):
     # TODO this is what you need to complete
-    top5 = df.nlargest(5, "Value")
-    plt.bar(top5["Coin"], top5["Value"])
-    plt.title("Top 5 Crypto Holdings")
-    plt.ylabel("USD Value")
+    plt.bar(df.index, df.values)
     
 
 ############## DO NOT TOUCH AREA: START #################
 def save_boxplot():
     # Save plot
-    file_path = 'boxplot_' + str(np.random.randint(1000)) + '.png'
+    file_path = 'barplot_' + str(np.random.randint(1000)) + '.png'
     plt.savefig(file_path)
     plt.close()  # Close the figure to free memory
     return os.path.abspath(file_path)
 
-def main():
-    build_plot()
+if __name__ == '__main__':
+    inp = input()
+    df = pd.read_csv(inp)
+    avg_prices = df.groupby('Name')['Close'].mean()
+    build_plot(avg_prices)
     path = save_boxplot()
     print(path)
-
-if __name__ == '__main__':
-    main()
 ############## DO NOT TOUCH AREA: END ###################
