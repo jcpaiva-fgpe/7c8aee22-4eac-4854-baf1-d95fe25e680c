@@ -5,10 +5,7 @@ import matplotlib.pyplot as plt
     
 def build_plot():
     # TODO this is what you need to complete
-    plt.scatter(df["BuyPrice"], df["CurrentPrice"])
-    plt.xlabel("Buy Price")
-    plt.ylabel("Current Price")
-    plt.title("Buy vs Current Price")
+    plt.scatter(df['High'], df['Low'])
     
 
 ############## DO NOT TOUCH AREA: START #################
@@ -19,11 +16,11 @@ def save_boxplot():
     plt.close()  # Close the figure to free memory
     return os.path.abspath(file_path)
 
-def main():
-    build_plot()
+if __name__ == '__main__':
+    inp = input()
+    df = pd.read_csv(inp)
+    df = df[df["Name"] == "Ethereum"]
+    build_plot(df)
     path = save_boxplot()
     print(path)
-
-if __name__ == '__main__':
-    main()
 ############## DO NOT TOUCH AREA: END ###################
