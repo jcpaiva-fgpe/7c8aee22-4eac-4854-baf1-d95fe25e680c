@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
     
 def build_plot():
     # TODO this is what you need to complete
-    plt.pie(df["Weight"], labels=df["Coin"], autopct="%1.1f%%")
-    plt.title("Portfolio Distribution")
+    plt.pie(volume_share.values, labels=volume_share.index)
+
     
 
 ############## DO NOT TOUCH AREA: START #################
@@ -17,11 +17,11 @@ def save_boxplot():
     plt.close()  # Close the figure to free memory
     return os.path.abspath(file_path)
 
-def main():
-    build_plot()
+if __name__ == '__main__':
+    inp = input()
+    df = pd.read_csv(inp)
+    volume_share = df.groupby('Name')['Volume'].sum()
+    build_plot(volume_share)
     path = save_boxplot()
     print(path)
-
-if __name__ == '__main__':
-    main()
 ############## DO NOT TOUCH AREA: END ###################
