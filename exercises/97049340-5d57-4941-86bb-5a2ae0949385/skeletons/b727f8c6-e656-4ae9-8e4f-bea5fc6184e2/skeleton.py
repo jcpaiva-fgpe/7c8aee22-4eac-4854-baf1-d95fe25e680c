@@ -1,9 +1,11 @@
 import os
 import numpy as np
+import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot():
+def build_plot(portugal_emissions):
+    years = ['2040', '2041', '2042', '2043', '2044']
     # TODO this is what you need to complete
 
     
@@ -16,11 +18,13 @@ def save_boxplot():
     plt.close()  # Close the figure to free memory
     return os.path.abspath(file_path)
 
-def main():
-    build_plot()
+if __name__ == '__main__':
+    inp = input()
+    df = pd.read_csv(inp)
+    years = ['2040', '2041', '2042', '2043', '2044']
+    portugal_data = df[df['country'] == 'Portugal'].iloc[0]
+    portugal_emissions = [portugal_data[year] for year in years]
+    build_plot(portugal_emissions)
     path = save_boxplot()
     print(path)
-
-if __name__ == '__main__':
-    main()
 ############## DO NOT TOUCH AREA: END ###################
