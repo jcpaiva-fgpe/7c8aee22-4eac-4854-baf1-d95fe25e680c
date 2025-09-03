@@ -1,17 +1,16 @@
 import os
 import numpy as np
+import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot():
+def build_plot(df):
     # TODO this is what you need to complete
-    plt.plot(days, btc_prices, color='green', linestyle='--', marker='o')
-    plt.title("Bitcoin Price Over 30 Days", fontsize=14, color='blue')
-    plt.xlabel("Day")
-    plt.ylabel("Price (USD)")
+    plt.plot(df['High'], color='blue')
+    plt.xlabel('Time (Days)')
+    plt.ylabel('High Price (USD)')
+    plt.title('Ethereum High Prices Over Time')
     plt.grid(True)
-    plt.annotate("Start", xy=(1, btc_prices[0]), xytext=(3, btc_prices[0]+500),
-                arrowprops=dict(facecolor='black', shrink=0.05))
     
 
 ############## DO NOT TOUCH AREA: START #################
@@ -22,11 +21,11 @@ def save_boxplot():
     plt.close()  # Close the figure to free memory
     return os.path.abspath(file_path)
 
-def main():
-    build_plot()
+if __name__ == '__main__':
+    inp = input()
+    df = pd.read_csv(inp)
+    df = df[df["Name"] == "Ethereum"]
+    build_plot(df)
     path = save_boxplot()
     print(path)
-
-if __name__ == '__main__':
-    main()
 ############## DO NOT TOUCH AREA: END ###################
