@@ -1,16 +1,15 @@
 import os
 import numpy as np
+import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot():
+def build_plot(df):
     # TODO this is what you need to complete
-    doge_returns = np.random.normal(0, 5, 100)
-
-    plt.boxplot(doge_returns)
-    plt.title("Dogecoin Daily Returns")
-    plt.ylabel("Return (%)")
-    plt.grid(True)
+    ethereum_data = df[df["Name"] == "Ethereum"]['High']
+    bitcoin_data = df[df["Name"] == "Bitcoin"]['High']
+    
+    plt.boxplot([bitcoin_data, ethereum_data])
     
 
 ############## DO NOT TOUCH AREA: START #################
@@ -21,11 +20,10 @@ def save_boxplot():
     plt.close()  # Close the figure to free memory
     return os.path.abspath(file_path)
 
-def main():
-    build_plot()
+if __name__ == '__main__':
+    inp = "crypto.csv"
+    df = pd.read_csv(inp)
+    build_plot(df)
     path = save_boxplot()
     print(path)
-
-if __name__ == '__main__':
-    main()
 ############## DO NOT TOUCH AREA: END ###################
