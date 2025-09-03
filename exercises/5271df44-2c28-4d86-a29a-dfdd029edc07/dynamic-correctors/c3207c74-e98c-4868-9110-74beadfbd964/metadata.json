@@ -1,0 +1,1 @@
+{"id":"c3207c74-e98c-4868-9110-74beadfbd964","pathname":"compare.py","command_line":"python3 /scripts/compare_images.py $expected $obtained"}
