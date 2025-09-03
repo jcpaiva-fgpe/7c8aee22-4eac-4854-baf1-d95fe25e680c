@@ -21,7 +21,7 @@ def save_boxplot():
     return os.path.abspath(file_path)
 
 if __name__ == '__main__':
-    inp = "crypto.csv"
+    inp = input()
     df = pd.read_csv(inp)
     build_plot(df)
     path = save_boxplot()
