@@ -1,14 +1,12 @@
 import os
 import numpy as np
+import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot():
+def build_plot(df):
     # TODO this is what you need to complete
-    plt.scatter(df["temp_anomaly"], df["sea_level"])
-    plt.title("Temp Anomaly vs Sea-Level Rise")
-    plt.xlabel("Anomaly (°C)")
-    plt.ylabel("Sea Level (mm)")
+    plt.boxplot(df['2040'])
     
 
 ############## DO NOT TOUCH AREA: START #################
@@ -19,11 +17,10 @@ def save_boxplot():
     plt.close()  # Close the figure to free memory
     return os.path.abspath(file_path)
 
-def main():
-    build_plot()
+if __name__ == '__main__':
+    inp = input()
+    df = pd.read_csv(inp)
+    build_plot(df)
     path = save_boxplot()
     print(path)
-
-if __name__ == '__main__':
-    main()
 ############## DO NOT TOUCH AREA: END ###################
