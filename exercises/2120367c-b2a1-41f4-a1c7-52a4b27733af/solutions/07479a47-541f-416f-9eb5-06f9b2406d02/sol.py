@@ -1,14 +1,12 @@
 import os
 import numpy as np
+import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot():
+def build_plot(df):
     # TODO this is what you need to complete
-    shares = [60, 25, 15]
-    labels = ["Fossil", "Renewables", "Nuclear"]
-    plt.pie(shares, labels=labels, autopct="%1.1f%%")
-    plt.title("Global Energy Mix")
+    plt.pie(df['2040'], labels=df['country'])
     
 
 ############## DO NOT TOUCH AREA: START #################
@@ -19,11 +17,11 @@ def save_boxplot():
     plt.close()  # Close the figure to free memory
     return os.path.abspath(file_path)
 
-def main():
-    build_plot()
+if __name__ == '__main__':
+    inp = input()
+    df = pd.read_csv(inp)
+    top_countries = df.nlargest(10, '2040')
+    build_plot(top_countries)
     path = save_boxplot()
     print(path)
-
-if __name__ == '__main__':
-    main()
 ############## DO NOT TOUCH AREA: END ###################
