@@ -4,9 +4,9 @@ import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot(df):
+def build_plot(df_btc):
     # TODO this is what you need to complete
-    plt.plot(df["Date"], df["High"])
+    plt.plot(df_btc["Date"], df_btc["High"])
     
 
 ############## DO NOT TOUCH AREA: START #################
