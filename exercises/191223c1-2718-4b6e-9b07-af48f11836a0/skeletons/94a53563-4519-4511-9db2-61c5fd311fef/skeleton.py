@@ -4,7 +4,7 @@ import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot(df):
+def build_plot(df_btc):
     # TODO this is what you need to complete
 
     
