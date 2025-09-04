@@ -1,4 +1,4 @@
-def sell_or_not(entry_value, current_value):
+def assets(price_change):
     # TODO this is what you need to complete
 
 
@@ -6,7 +6,6 @@ def sell_or_not(entry_value, current_value):
 ############## DO NOT TOUCH AREA: START #################
 if __name__ == '__main__':
     inp = input()
-    entry_value = int(inp.split(" ")[0])
-    current_value = int(inp.split(" ")[1])
-    sell_or_not(entry_value, current_value)
+    price_change = int(inp)
+    assets(price_change)
 ############## DO NOT TOUCH AREA: END ###################
