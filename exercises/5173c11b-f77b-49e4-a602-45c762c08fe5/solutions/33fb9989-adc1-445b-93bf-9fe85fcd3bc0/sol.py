@@ -2,8 +2,8 @@ import numpy as np
 
 def track():
     # TODO this is what you need to complete
-    years = np.array([2000, 2005, 2010])
-    temps = np.array([0.5, 0.7, 1.0])
+    years = np.array([1, 2, 3])
+    temps = np.array([0.8, 1.1, 0.9])
     return years, temps
 
 
