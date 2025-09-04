@@ -6,7 +6,7 @@ os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 def applying(path):
     # TODO this is what you need to complete
     df = pd.read_csv(path)
-    df["High_Euro"] = df["High"].apply(lambda x: x * 1.1)
+    df["SpreadPct"] = df.apply(lambda row: ((row["High"] - row["Low"]) / row["Open"]) * 100, axis=1)
     return df
 
 
