@@ -1,19 +1,17 @@
 import json
 
-def check(wallet):
+def check(sweeps):
     # TODO this is what you need to complete
-    result = ""
-    for i in range(len(wallet)):
-        if i == 0:
-            result += wallet[i]
-        else:
-            result += ", " + wallet[i]
+    result_parts = []
+    for i in range(len(sweeps)):
+        result_parts.append(f"Exchange {i+1}: {sweeps[i]} BTC")
+    result = ", ".join(result_parts)
     print(result)
 
 
 ############## DO NOT TOUCH AREA: START #################
 if __name__ == '__main__':
     inp = input()
-    wallet = json.loads(inp)
-    check(wallet)
+    sweeps = json.loads(inp)
+    check(sweeps)
 ############## DO NOT TOUCH AREA: END ###################
