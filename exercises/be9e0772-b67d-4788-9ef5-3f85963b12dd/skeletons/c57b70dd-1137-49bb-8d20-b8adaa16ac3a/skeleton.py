@@ -7,5 +7,5 @@ import json
 if __name__ == '__main__':
     inp = input()
     data = json.loads(inp)
-    print(portfolio(data))
+    print(average(data))
 ############## DO NOT TOUCH AREA: END ###################
