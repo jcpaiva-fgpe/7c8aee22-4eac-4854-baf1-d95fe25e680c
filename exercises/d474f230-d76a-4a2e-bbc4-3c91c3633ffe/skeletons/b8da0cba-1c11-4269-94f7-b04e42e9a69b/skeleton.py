@@ -1,15 +1,16 @@
 import numpy as np
 import json
 
-def greenhouse_levels(co2_levels, methane_levels):
+def combined_emission(source1, source2):
     # TODO this is what you need to complete
-    
+
 
 
 ############## DO NOT TOUCH AREA: START #################
 if __name__ == '__main__':
-    inp = input()
-    co2_levels = json.loads(inp.slit(" ")[0])
-    methane_levels = json.loads(inp.slit(" ")[1])
-    print(greenhouse_levels(co2_levels, methane_levels))
+    inp = input().strip()
+    parts = inp.split(" ")
+    source1 = json.loads(parts[0])
+    source2 = json.loads(parts[1])
+    print(combined_emission(source1, source2))
 ############## DO NOT TOUCH AREA: END ###################
