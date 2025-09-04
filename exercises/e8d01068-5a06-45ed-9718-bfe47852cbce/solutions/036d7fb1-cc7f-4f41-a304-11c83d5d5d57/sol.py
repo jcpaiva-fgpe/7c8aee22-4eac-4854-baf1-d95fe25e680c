@@ -4,9 +4,9 @@ import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot(df):
+def build_plot(avg_close):
     # TODO this is what you need to complete
-    plt.bar(df.index, df.values)
+    plt.bar(["Bitcoin", "Ethereum"], avg_close)
     
 
 ############## DO NOT TOUCH AREA: START #################
@@ -21,7 +21,8 @@ if __name__ == '__main__':
     inp = input()
     df = pd.read_csv(inp)
     avg_prices = df.groupby('Name')['Close'].mean()
-    build_plot(avg_prices)
+    avg_close = [avg_prices['Bitcoin'], avg_prices['Ethereum']]
+    build_plot(avg_close)
     path = save_boxplot()
     print(path)
 ############## DO NOT TOUCH AREA: END ###################
