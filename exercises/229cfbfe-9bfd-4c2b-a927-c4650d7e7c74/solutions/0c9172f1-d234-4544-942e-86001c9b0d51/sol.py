@@ -1,8 +1,8 @@
 def coin():
     # TODO this is what you need to complete
     coin = "Ethereum"
-    gain_24h = 4.5
-    print(coin, "gained", gain_24h, "% today")
+    gain_24h = 45210.0
+    print(coin, "is currently priced at", gain_24h, "USD")
 
 
 ############## DO NOT TOUCH AREA: START #################
