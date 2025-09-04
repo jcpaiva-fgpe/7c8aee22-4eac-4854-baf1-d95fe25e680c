@@ -1,16 +1,14 @@
-def sell_or_not(entry_value, current_value):
+def sell_or_not(price_change):
     # TODO this is what you need to complete
-    gain = (current_value - entry_value) / entry_value * 100
-    if gain > 50:
-        print("SELL!")
+    if price_change > 5000:
+        print("Alert: High volatility")
     else:
-        print("HOLD")
+        print("Stable")
 
 
 ############## DO NOT TOUCH AREA: START #################
 if __name__ == '__main__':
     inp = input()
-    entry_value = int(inp.split(" ")[0])
-    current_value = int(inp.split(" ")[1])
-    sell_or_not(entry_value, current_value)
+    price_change = int(inp)
+    sell_or_not(price_change)
 ############## DO NOT TOUCH AREA: END ###################
