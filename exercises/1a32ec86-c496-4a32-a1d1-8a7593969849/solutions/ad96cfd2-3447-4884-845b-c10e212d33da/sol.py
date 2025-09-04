@@ -4,10 +4,10 @@ import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot(us_emissions):
-    years = ['2040', '2041', '2042', '2043', '2044']
+def build_plot(india_emissions):
     # TODO this is what you need to complete
-    plt.bar(years, us_emissions)
+    years = ['2040', '2041', '2042', '2043', '2044']
+    plt.bar(years, india_emissions)
 
 
 ############## DO NOT TOUCH AREA: START #################
@@ -22,9 +22,9 @@ if __name__ == '__main__':
     inp = input()
     df = pd.read_csv(inp)
     years = ['2040', '2041', '2042', '2043', '2044']
-    us_data = df[df['country'] == 'United States'].iloc[0]
-    us_emissions = [us_data[year] for year in years]
-    build_plot(us_emissions)
+    india_data = df[df['country'] == 'India'].iloc[0]
+    india_emissions = [india_data[year] for year in years]
+    build_plot(india_emissions)
     path = save_boxplot()
     print(path)
 ############## DO NOT TOUCH AREA: END ###################
