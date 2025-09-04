@@ -4,12 +4,9 @@ import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot(df):
+def build_plot(bitcoin_data, ethereum_data):
     # TODO this is what you need to complete
-    ethereum_data = df[df["Name"] == "Ethereum"]['High']
-    bitcoin_data = df[df["Name"] == "Bitcoin"]['High']
-    
-    plt.boxplot([bitcoin_data, ethereum_data])
+    plt.boxplot([bitcoin_data['High'], ethereum_data['High']], labels=['Bitcoin', 'Ethereum'])
     
 
 ############## DO NOT TOUCH AREA: START #################
@@ -23,7 +20,9 @@ def save_boxplot():
 if __name__ == '__main__':
     inp = input()
     df = pd.read_csv(inp)
-    build_plot(df)
+    ethereum_data = df[df["Name"] == "Ethereum"]
+    bitcoin_data = df[df["Name"] == "Bitcoin"]
+    build_plot(bitcoin_data, ethereum_data)
     path = save_boxplot()
     print(path)
 ############## DO NOT TOUCH AREA: END ###################
