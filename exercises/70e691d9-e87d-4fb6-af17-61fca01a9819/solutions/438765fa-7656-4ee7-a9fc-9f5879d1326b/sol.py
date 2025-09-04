@@ -1,4 +1,5 @@
 import numpy as np
+import json
 
 def profits(bitcoin, ethereum):
     # TODO this is what you need to complete
