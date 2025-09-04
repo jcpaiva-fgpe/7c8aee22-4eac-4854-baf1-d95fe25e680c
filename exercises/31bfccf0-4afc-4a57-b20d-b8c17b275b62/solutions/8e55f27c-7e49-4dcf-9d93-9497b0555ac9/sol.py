@@ -1,8 +1,8 @@
 def calculation():
     # TODO this is what you need to complete
-    bought = 30000
-    now = 68000
-    gain = now - bought
+    high = 45210.0
+    low = 44980.0
+    gain = high - low
     print(gain)
 
 
