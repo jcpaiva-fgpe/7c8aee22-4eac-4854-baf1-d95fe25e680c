@@ -13,12 +13,12 @@ def sort(path):
 
 ############## DO NOT TOUCH AREA: START #################
 def save_df(df):
-    file_path = 'pandas_climate_7.csv'
+    file_path = 'pandas_climate_7_' + str(np.random.randint(1000)) + '.csv'
     df.to_csv(file_path, index=False)
-    return file_path
+    return os.path.abspath(file_path)
 
 if __name__ == '__main__':
-    inp = "emissions.csv"
+    inp = input()
     df = sort(inp)
     path = save_df(df)
     print(path)
