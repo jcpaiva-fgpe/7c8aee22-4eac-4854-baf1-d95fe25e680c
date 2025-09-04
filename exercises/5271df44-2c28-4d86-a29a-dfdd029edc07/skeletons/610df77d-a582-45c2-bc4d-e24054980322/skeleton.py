@@ -5,7 +5,6 @@ os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
 def build_plot(china_emissions):
-    years = ['2040', '2041', '2042', '2043', '2044']
     # TODO this is what you need to complete
 
     
