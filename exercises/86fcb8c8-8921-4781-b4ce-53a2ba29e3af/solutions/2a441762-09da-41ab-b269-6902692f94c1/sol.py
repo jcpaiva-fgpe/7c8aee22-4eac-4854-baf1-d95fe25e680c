@@ -6,19 +6,20 @@ os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 def filtering(path):
     # TODO this is what you need to complete
     df = pd.read_csv(path)
-    df["Diff"] = df["High"] - df["Low"]
-    return df
+    
+    # Calculate statistical summary of the High column
+    mean_high = df["High"].mean()
+    median_high = df["High"].median()
+    min_high = df["High"].min()
+    max_high = df["High"].max()
+    
+    # Return all results as a dictionary
+    return  mean_high, median_high, min_high, max_high
 
 
 ############## DO NOT TOUCH AREA: START #################
-def save_df(df):
-    file_path = 'pandas_crypto_3_' + str(np.random.randint(1000)) + '.csv'
-    df.to_csv(file_path, index=False)
-    return file_path
-
 if __name__ == '__main__':
     inp = input()
-    df = filtering(inp)
-    path = save_df(df)
-    print(path)
+    mean, median, mi, ma = filtering(inp)
+    print(mean, median, mi, ma)
 ############## DO NOT TOUCH AREA: END ###################
