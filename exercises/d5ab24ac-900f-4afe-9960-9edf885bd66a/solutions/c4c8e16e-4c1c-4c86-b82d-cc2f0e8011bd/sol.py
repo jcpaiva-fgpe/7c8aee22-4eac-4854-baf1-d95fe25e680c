@@ -3,9 +3,9 @@ import numpy as np
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
-def build_plot():
+def build_plot(sizes):
     # TODO this is what you need to complete
-    plt.pie(volume_share.values, labels=volume_share.index)
+    plt.pie(sizes, labels=["Bitcoin", "Ethereum"])
 
     
 
@@ -21,7 +21,8 @@ if __name__ == '__main__':
     inp = input()
     df = pd.read_csv(inp)
     volume_share = df.groupby('Name')['Volume'].sum()
-    build_plot(volume_share)
+    sizes = [volume_share['Bitcoin'], volume_share['Ethereum']]
+    build_plot(sizes)
     path = save_boxplot()
     print(path)
 ############## DO NOT TOUCH AREA: END ###################
