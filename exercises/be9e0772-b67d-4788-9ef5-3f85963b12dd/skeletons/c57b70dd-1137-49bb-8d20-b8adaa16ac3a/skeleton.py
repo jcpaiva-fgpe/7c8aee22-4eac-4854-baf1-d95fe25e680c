@@ -6,6 +6,6 @@ import json
 ############## DO NOT TOUCH AREA: START #################
 if __name__ == '__main__':
     inp = input()
-    data = json.loads(inp)
-    print(average(data))
+    dictionary = json.loads(inp)
+    print(average_price(dictionary))
 ############## DO NOT TOUCH AREA: END ###################
