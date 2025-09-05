@@ -1,0 +1,1 @@
+{"id":"01a4def7-31e1-4813-95fb-b98786c1c7ab","name":"Message Finish Level 2","triggers":[{"kind":"ACTION","event":"CHALLENGE_COMPLETED","recurrent":false,"parameters":["d7bb7bf1-c761-4717-bcf0-54a6a1e68bbf"]}],"criteria":{},"actions":[{"type":"GIVE","parameters":["982192c4-ff4f-4a7f-8a35-4b426a857089"]}]}
