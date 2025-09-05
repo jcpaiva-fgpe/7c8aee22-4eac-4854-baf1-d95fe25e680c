@@ -1,6 +1,6 @@
 import pandas as pd
 
-def explore(temperatures):
+def explore(path):
     # TODO this is what you need to complete
     
 
