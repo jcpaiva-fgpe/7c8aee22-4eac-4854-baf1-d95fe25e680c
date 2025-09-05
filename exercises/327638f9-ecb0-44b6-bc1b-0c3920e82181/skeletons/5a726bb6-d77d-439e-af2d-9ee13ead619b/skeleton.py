@@ -1,6 +1,6 @@
 import json
 
-def sensors(sensor_array):
+def sensor_sweep(sensor_array):
     # TODO this is what you need to complete
 
 
@@ -9,5 +9,5 @@ def sensors(sensor_array):
 if __name__ == '__main__':
     inp = input()
     sensor_array = json.loads(inp)
-    sensors(sensor_array)
+    sensor_sweep(sensor_array)
 ############## DO NOT TOUCH AREA: END ###################
