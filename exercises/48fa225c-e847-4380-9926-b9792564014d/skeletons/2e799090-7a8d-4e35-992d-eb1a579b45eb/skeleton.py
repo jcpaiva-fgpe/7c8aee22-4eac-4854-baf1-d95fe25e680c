@@ -7,6 +7,6 @@ import json
 ############## DO NOT TOUCH AREA: START #################
 if __name__ == '__main__':
     inp = input()
-    values = json.loads(inp)
-    print(average_warming(values))
+    dictionary = json.loads(inp)
+    print(average_warming(dictionary))
 ############## DO NOT TOUCH AREA: END ###################
