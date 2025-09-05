@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import pandas as pd
 os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 import matplotlib.pyplot as plt
     
