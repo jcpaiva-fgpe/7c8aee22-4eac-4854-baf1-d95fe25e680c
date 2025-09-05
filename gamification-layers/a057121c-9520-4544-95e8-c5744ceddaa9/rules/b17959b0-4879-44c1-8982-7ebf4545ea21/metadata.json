@@ -1,0 +1,1 @@
+{"id":"b17959b0-4879-44c1-8982-7ebf4545ea21","name":"Mission Completed","triggers":[{"kind":"ACTION","event":"CHALLENGE_COMPLETED","recurrent":false,"parameters":["025ba3c0-2be1-44db-af82-4a1290b4ad6c"]}],"criteria":{},"actions":[{"type":"UPDATE","parameters":["caf4334a-997d-4f86-b7c8-1fa3f4183901"]}]}
