@@ -1,6 +1,6 @@
 import pandas as pd
 
-def explore(path):
+def inspect(path):
     # TODO this is what you need to complete
     
 
@@ -8,5 +8,5 @@ def explore(path):
 ############## DO NOT TOUCH AREA: START #################
 if __name__ == '__main__':
     inp = input()
-    explore(inp)
+    inspect(inp)
 ############## DO NOT TOUCH AREA: END ###################
