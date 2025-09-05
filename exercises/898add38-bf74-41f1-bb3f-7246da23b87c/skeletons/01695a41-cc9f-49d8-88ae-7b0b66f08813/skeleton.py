@@ -1,6 +1,6 @@
 import json
 
-def check(sweeps):
+def trade_sweep(sweeps):
     # TODO this is what you need to complete
 
 
@@ -9,5 +9,5 @@ def check(sweeps):
 if __name__ == '__main__':
     inp = input()
     sweeps = json.loads(inp)
-    check(sweeps)
+    trade_sweep(sweeps)
 ############## DO NOT TOUCH AREA: END ###################
