@@ -1,4 +1,4 @@
-def decide(temp_rise):
+def deciding_the_danger(temp_rise):
     # TODO this is what you need to complete
 
 
@@ -7,5 +7,5 @@ def decide(temp_rise):
 if __name__ == '__main__':
     inp = input()
     temp_rise = float(inp)
-    decide(temp_rise)
+    deciding_the_danger(temp_rise)
 ############## DO NOT TOUCH AREA: END ###################
