@@ -1,0 +1,1 @@
+{"id":"2d91950e-5e53-4ff8-9ff7-8836d2b88a6c","name":"final","triggers":[{"kind":"ACTION","event":"CHALLENGE_COMPLETED","recurrent":false,"parameters":["d7bb7bf1-c761-4717-bcf0-54a6a1e68bbf"]}],"criteria":{},"actions":[{"type":"GIVE","parameters":["027f45fb-a6c6-4337-a3bb-b388f8f2692b"]}]}
