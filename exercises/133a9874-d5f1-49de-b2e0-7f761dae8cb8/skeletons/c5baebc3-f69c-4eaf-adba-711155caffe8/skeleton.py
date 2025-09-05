@@ -1,4 +1,4 @@
-def assets(price_change):
+def price_alert(price_change):
     # TODO this is what you need to complete
 
 
@@ -7,5 +7,5 @@ def assets(price_change):
 if __name__ == '__main__':
     inp = input()
     price_change = int(inp)
-    assets(price_change)
+    price_alert(price_change)
 ############## DO NOT TOUCH AREA: END ###################
