@@ -1,1 +1,1 @@
-{"id":"f85c4cf3-38d5-4d3c-942a-589d79949cc5","name":"Unlock Level 2","triggers":[{"kind":"TIME","event":"INTERVAL","recurrent":false,"parameters":[10]}],"criteria":{},"actions":[]}
+{"id":"f85c4cf3-38d5-4d3c-942a-589d79949cc5","name":"Unlock Level 2","triggers":[{"kind":"ACTION","event":"CHALLENGE_COMPLETED","recurrent":false,"parameters":["4e6c5250-9d55-4e03-a4c5-8509e2dd338b"]}],"criteria":{},"actions":[{"type":"GIVE","parameters":["8d2b603b-74b8-4f3d-91e8-f7f4ed4ef6af"]}]}
