@@ -6,22 +6,7 @@ import matplotlib.pyplot as plt
     
 def build_plot(path):
     # TODO this is what you need to complete
-    df = pd.read_csv(path)
-    
-    # Filter data for multiple countries
-    countries = ["USA", "China", "India"]
-    
-    # Plot each country as a separate line
-    for country in countries:
-        country_data = df[df["Country"] == country]
-        plt.plot(country_data["Year"], country_data["CO2 Emissions (Tons/Capita)"], 
-                label=country, marker='o')
-    
-    # Add labels and legend
-    plt.title("CO2 Emissions per Capita Over Time")
-    plt.xlabel("Year")
-    plt.ylabel("CO2 Emissions (Tons/Capita)")
-    plt.legend()  # This shows the country names
+
     
 
 ############## DO NOT TOUCH AREA: START #################
