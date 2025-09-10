@@ -5,32 +5,34 @@ os.environ['MPLCONFIGDIR'] = os.getcwd() + "/.tmp"
 
 def applying(path):
     # TODO this is what you need to complete
+    # TODO this is what you need to complete
     df = pd.read_csv(path)
 
-    # 2) Handle missing data
-    numeric_cols = [
+    num_cols = [
         "Avg Temperature (°C)", "CO2 Emissions (Tons/Capita)", "Sea Level Rise (mm)",
         "Rainfall (mm)", "Population", "Renewable Energy (%)",
         "Extreme Weather Events", "Forest Area (%)"
     ]
-    # Fill only for columns that actually exist (avoids KeyErrors)
-    for col in [c for c in numeric_cols if c in df.columns]:
-        df[col] = df[col].fillna(df[col].median())
+    for c in num_cols:
+        df[c] = pd.to_numeric(df[c], errors="coerce")
 
-    # Drop rows with missing Country or Year
     df = df.dropna(subset=["Country", "Year"])
+    df["Year"] = pd.to_numeric(df["Year"], errors="coerce")
+    df = df.dropna(subset=["Year"])
+    df["Year"] = df["Year"].astype(int)
 
-    # 3) Feature engineering
+    df[num_cols] = df[num_cols].apply(lambda s: s.fillna(s.median()))
+
     df["CO2_per_Person"] = df["CO2 Emissions (Tons/Capita)"] * df["Population"]
     df["Sustainability_Index"] = (df["Renewable Energy (%)"] + df["Forest Area (%)"]) / 2
 
-    # 4) Select only the important columns
-    df = df[[
-        "Country", "Year",
-        "Avg Temperature (°C)", "CO2 Emissions (Tons/Capita)", "Population",
-        "CO2_per_Person", "Sustainability_Index", "Renewable Energy (%)"
-    ]]
-    return df
+    grouped = (
+        df.groupby(["Country", "Year"], as_index=False)
+          .mean(numeric_only=True)
+    )
+
+    grouped = grouped.sort_values(["Country", "Year"]).reset_index(drop=True)
+    return grouped
 
 
 ############## DO NOT TOUCH AREA: START #################
